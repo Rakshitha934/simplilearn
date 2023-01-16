@@ -13,7 +13,11 @@ public class BusinessLevelOperations implements FileInterface {
 	
 	public void showAllFiles()
 	{
-	String path="D:\\caltech\\";
+	Scanner sc=new Scanner(System.in);
+	System.out.println("enter the Path:");
+	String path=sc.nextLine();
+	System.out.println("enter the file name");
+	String filename=sc.nextLine();
 	File file=new File(path);
 	//display operation
 	File filename[]=file.listFiles();
@@ -25,8 +29,10 @@ public class BusinessLevelOperations implements FileInterface {
 	}
 	public void addFile() throws IOException 
 	{
-		String path="D:\\caltech\\";
+		
 		Scanner sc=new Scanner(System.in);
+		System.out.println("enter the Path:");
+		String path=sc.nextLine();
 		System.out.println("enter the file name");
 		String filename=sc.next();
 		String finalpath=path+filename;
@@ -45,8 +51,10 @@ public class BusinessLevelOperations implements FileInterface {
 
 	public  void deleteFile() 
 	{
-	String path="D:\\caltech\\";
+	
 	Scanner sc=new Scanner(System.in);
+	System.out.println("enter the Path:");
+	String path=sc.nextLine();
 	System.out.println("enter the file name");
 	String filename=sc.next();
 	String finalpath=path+filename;
@@ -62,8 +70,10 @@ public class BusinessLevelOperations implements FileInterface {
 	
 	public void searchFile() 
 	{
-		String path="D:\\caltech\\";
+		
 		Scanner sc=new Scanner(System.in);
+		System.out.println("enter the Path:");
+		String path=sc.nextLine();
 		System.out.println("enter the file to search");
 		String filenamesearch=sc.next();
 		File file=new File(path);
